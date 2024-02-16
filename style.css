@@ -5,6 +5,7 @@
 }
 
 body {
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -43,21 +44,57 @@ nav {
   filter: invert(100%);
 }
 
-.enabled {
+.enabled,
+.disabled {
   background-color: white;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
-  width: 85%;
+  z-index: 2;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem 3rem 0 3rem;
   font-family: "Inter", sans-serif;
+  transition: left 0.5s ease;
 }
 
-.enabled a {
+.enabled {
+  left: 15%;
+  animation: slidein 500ms;
+}
+
+.disabled {
+  animation: slideaway 500ms;
+  display: none;
+  left: 100%;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+@keyframes slideaway {
+  from {
+    display: flex;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.enabled a,
+.disabled a {
   font-size: 1.5rem;
   text-decoration: none;
   color: black;
@@ -76,12 +113,18 @@ nav {
   background-position: center;
 }
 
-.disabled {
-  position: absolute;
-  left: 1000px;
+/* -----------MAIN----------- */
+main {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /* -----------HERO----------- */
+
 .hero {
   height: 100vh;
   background: rgba(0, 0, 0, 0.4) url(./assets/background.png);

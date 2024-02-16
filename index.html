@@ -28,22 +28,21 @@
           <a href="#">Company</a>
           <a href="#" class="btn">Get started</a>
         </div>
-        <div class="menu-icon"></div>
-        <div class="disabled">
-          <div class="closing-icon-holder">
-            <div class="closing-icon"></div>
-          </div>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Artists</a>
-          <a href="#">Careers</a>
-          <a href="#">News</a>
-          <a href="#">Company</a>
-          <a href="#" class="btn">Get started</a>
-        </div>
+        <div class="menu-icon" id="menu" onclick="(openMenu())"></div>
       </nav>
     </header>
     <main>
+      <div class="disabled" id="side-menu">
+        <div class="closing-icon-holder">
+          <div class="closing-icon" onclick="(closeMenu())"></div>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Artists</a>
+        <a href="#">Careers</a>
+        <a href="#">News</a>
+        <a href="#">Company</a>
+      </div>
       <section class="hero">
         <img src="./assets/line.png" alt="white line" />
         <h1>Art pieces made easy accessible for everyone</h1>
@@ -95,5 +94,6 @@
         </section>
       </article>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
