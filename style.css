@@ -62,11 +62,11 @@ nav {
 
 .enabled {
   left: 15%;
-  animation: slidein 500ms;
+  animation: slidein 300ms;
 }
 
 .disabled {
-  animation: slideaway 500ms;
+  animation: slideaway 200ms;
   display: none;
   left: 100%;
 }
@@ -74,6 +74,7 @@ nav {
 @keyframes slidein {
   from {
     transform: translateX(100%);
+    overflow: hidden;
   }
   to {
     transform: translateX(0);
@@ -85,11 +86,13 @@ nav {
 @keyframes slideaway {
   from {
     display: flex;
+    overflow: hidden;
   }
   to {
     transform: translateX(100%);
     opacity: 0;
     display: none;
+    overflow: hidden;
   }
 }
 
@@ -120,7 +123,7 @@ main {
 }
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 /* -----------HERO----------- */
