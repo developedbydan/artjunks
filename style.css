@@ -206,7 +206,7 @@ main {
   font-weight: 600;
 }
 .post-img {
-  width: 311px;
+  width: 100%;
   min-height: 352px;
   border: none;
   border-top-left-radius: 5px;
