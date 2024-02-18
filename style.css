@@ -188,6 +188,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .post-info h3 {
